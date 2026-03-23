@@ -14,7 +14,7 @@ app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
 
-app.get('api/weather', async (req, res) => {
+app.get('/api/weather', async (req, res) => {
     const {city} = req.query;
     const apiKey = process.env.API_KEY;
 

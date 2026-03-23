@@ -1,0 +1,54 @@
+.current-weather{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 20px;
+
+    .temp {
+        margin-top: 0px;
+    }
+    img{
+        width: 100px;
+    }
+    p {
+        font-size: 1.2rem;
+        margin: 0;
+    }
+}
+
+.condition, .condition-icon{
+    text-align: center;
+}
+
+.condition-text{
+    margin-top: 0px;
+}
+
+.left-card{
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    max-width: 400px;
+}
+
+.right-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.detail-item{
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.detail-item:last-child{
+    margin-bottom: 0;
+}
+
+.detail-label{
+    color: white;
+}
