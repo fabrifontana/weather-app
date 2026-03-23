@@ -3,13 +3,20 @@ form {
     align-items: center;
     padding: 8px 12px;
     margin: 20px 0;
-    max-width: 400px;
+    
+    min-width: 800px;
 
     background: rgba(75,75,75, .2);
     border-radius: 16px;
-    box-shadow: 0 4px 32px rgba(0,0,0, .1);
-    border: 1px solid rgba(255,255,255, .2);
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
+    border: 1.5px solid rgba(255, 255, 255, 0.402);
     backdrop-filter: blur(20px);
+
+    transition: all 0.5s;
+}
+
+form:hover {
+    border: 1.5px solid rgba(255, 255, 255, 0.877);
 }
 
 .search-input {
@@ -20,7 +27,14 @@ form {
     border: none;
     width: 100%;
     background: transparent;
+    color: white;
+    font-weight: bold;
 }
+input::placeholder{
+        color: rgba(255, 255, 255, .7);
+        font-weight: normal;
+        font-style: italic;
+    }
 
 .search-icon{
     cursor: default;

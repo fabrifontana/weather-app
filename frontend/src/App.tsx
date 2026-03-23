@@ -38,10 +38,9 @@ function App() {
     weatherData.location.localtime,
     'yyyy-MM-dd HH:mm',
     new Date()
-  ): new Date().getHours();
+  ). getHours() : new Date().getHours();
  
-  const gradientClass = getGradientClass(hour)
-
+  let gradientClass = getGradientClass(hour)
 
   useEffect(() => {
     const fetchWeather = async () => {
@@ -55,10 +54,11 @@ function App() {
 
         setWeatherData({
           current: {...data.current, mintemp_c, maxtemp_c},
-          hourly: data.forecast.forecastday[0].day,
+          hourly: data.forecast.forecastday[0].hour,
           weekly: data.forecast.forecastday.slice(1),
           location: data.location
         })
+        gradientClass = getGradientClass(hour)
         setError('')
       } catch (e) {
         setError(`Error: ${e}`);
@@ -69,8 +69,6 @@ function App() {
     
     fetchWeather()
   }, [city]);
-  
-  console.log(weatherData)
 
   return (
     <div className={`app ${gradientClass}`}>

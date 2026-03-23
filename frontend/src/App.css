@@ -8,6 +8,7 @@
 
 .container{
     display: flex;
+    align-items: center;
     flex-direction: column;
 }
 
@@ -21,17 +22,46 @@
 }
 
 .bg-morning{
-    background: linear-gradient(135deg, #FFDEE9 0%, #B5FFFC 100%);
+    background:
+        radial-gradient(ellipse at top, rgba(211,158,72,0.6), transparent),
+        radial-gradient(ellipse at bottom, rgba(50,27,113,0.6), transparent),
+        url('./assets/background.jpg');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .bg-day{
-    background: linear-gradient(135deg, #B5FFFC 0%, #80D0FF 100%);
+    background:
+        radial-gradient(ellipse at top, rgba(203, 229, 150, 0.702), transparent),
+        radial-gradient(ellipse at bottom, rgb(62, 165, 255), transparent),
+        url('./assets/background.jpg');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .bg-evening{
-    background: linear-gradient(135deg, #FFA500 0%, #FF6347 100%);
+    background:
+        radial-gradient(ellipse at top, rgba(255, 189, 7, 0.461), transparent),
+        radial-gradient(ellipse at bottom, rgba(236, 225, 132, 0.917), transparent),
+        url('./assets/background.jpg');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
 }
 
 .bg-night{
-    background: linear-gradient(135deg, #2C3E50 0%, #1A1A2E 100%);
+     background:
+        radial-gradient(ellipse at top, rgba(10, 4, 91, 0.761), transparent),
+        radial-gradient(ellipse at bottom, rgba(0, 0, 0, 0.917), transparent),
+        url('./assets/background.jpg');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
